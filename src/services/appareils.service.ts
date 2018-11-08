@@ -9,7 +9,10 @@ export class AppareilsService {
                 'Temps de lavage: 2 heures',
                 'Consommation: 173kwh/an'
             ],
-            isOn: true
+            isOn: true,
+            startTime: '',
+            endTime: ''
+
         },
         {
             name: 'Télévision',
@@ -17,7 +20,9 @@ export class AppareilsService {
                 'Dimensions: 40 pouces',
                 'Consommation: 22kwh/an'
             ],
-            isOn: true
+            isOn: true,
+            startTime: '',
+            endTime: ''
         },
         {
             name: 'Volet',
@@ -25,7 +30,9 @@ export class AppareilsService {
                 'Marque: DELL',
                 'Consommation: 500kwh/an'
             ],
-            isOn: false
+            isOn: false,
+            startTime: '',
+            endTime: ''
         }
         
     ];

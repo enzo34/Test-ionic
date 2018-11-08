@@ -37,4 +37,31 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <form #f='ngForm' (ngSubmit)="onSubmitForm(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label>Heure d'allumage</ion-label>
+        <ion-datetime displayFormat="HH:mm" 
+                      name="startTime" 
+                      [(ngModel)]="appareil.startTime"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Heure d'extinction</ion-label>
+          <ion-datetime displayFormat="HH:mm" 
+                        name="endTime" 
+                        [(ngModel)]="appareil.endTime"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button type="button"
+            ion-button
+            full
+            color="danger"
+            (click)="onDeleteHours()">Supprimer Horaires
+    </button>
+    <button ion-button 
+            full 
+            type="submit"
+            color="secondary">Enregistre horaires
+    </button>
+  </form>
 </ion-content>
