@@ -1,0 +1,12 @@
+page-single-appareil {
+    .is_on {
+       ion-cars-content, ion-card-header, ion-grid {
+           background-color: color($colors, secondary-light);
+       }
+    }
+    .is_off {
+        ion-cars-content, ion-card-header, ion-grid {
+            background-color: color($colors, danger-light);
+        }
+    }
+}
