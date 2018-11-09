@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { environment as ENV } from '../../src/environments/environment';
 
 import * as firebase from 'firebase';
 
@@ -26,12 +27,12 @@ export class MyApp {
     platform.ready().then(() => {
       // Initialize Firebase
       let config = {
-        apiKey: "AIzaSyDP93wgsqGVCzwfJf3EbbUgJSc47THjKtk",
-        authDomain: "ionic-test-32c78.firebaseapp.com",
-        databaseURL: "https://ionic-test-32c78.firebaseio.com",
-        projectId: "ionic-test-32c78",
-        storageBucket: "",
-        messagingSenderId: "299501455604"
+        apiKey: ENV.apiKey,
+        authDomain: ENV.authDomain,
+        databaseURL: ENV.databaseURL,
+        projectId: ENV.projectId,
+        storageBucket: ENV.storageBucket,
+        messagingSenderId: ENV.messagingSenderId
       };
       firebase.initializeApp(config);
       firebase.auth().onAuthStateChanged(
@@ -59,5 +60,6 @@ export class MyApp {
     firebase.auth().signOut();
     this.menuCtrl.close();
   }
+
 }
 
